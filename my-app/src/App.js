@@ -14,6 +14,9 @@ class App extends Component {
     currentTab : "stats",
     currentCategory: "Art & Design"
   }
+  manageTab = (tab) => {
+    this.setState({curentTab: tab})
+  }
   render() {
     let {curentTab,currentCategory,data} = this.state
     let userBookList = data.books.filter( book => book.recommended)
@@ -36,9 +39,9 @@ class App extends Component {
             <article >
               <nav>
                 <ul>
-                  <li><a href="./" alt="" ref ="">stats</a></li>
-                  <li><a href="./" alt="" ref ="">library</a></li>
-                  <li><a href="./" alt="" ref ="">pick for you</a></li>
+                  <li><a href="./" onClick = {this.manageTab.bind("stats")} >stats</a></li>
+                  <li><a href="./" onClick = {this.manageTab.bind("bookList")}>library</a></li>
+                  <li><a href="./" onClick = {this.manageTab.bind("userBookList")}>pick for you</a></li>
                 </ul>
               </nav>
               {curentTab === "stats"? <Stats userStats = {data.users.userStats}/>
