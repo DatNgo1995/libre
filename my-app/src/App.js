@@ -15,7 +15,8 @@ class App extends Component {
     currentCategory: "Art & Design"
   }
   render() {
-    let {curentTab,currentCategory} = this.state
+    let {curentTab,currentCategory,data} = this.state
+    let userBookList = data.books.filter( book => book.recommended)
     return (
       <div className="App">
         <header className="App-header">
@@ -40,9 +41,9 @@ class App extends Component {
                   <li><a href="./" alt="" ref ="">pick for you</a></li>
                 </ul>
               </nav>
-              {curentTab === "stats"? <Stats />
-              :curentTab === "bookList"? <BookList />
-              :curentTab === "userBookList" ? <UserBookList /> : null}
+              {curentTab === "stats"? <Stats userStats = {data.users.userStats}/>
+              :curentTab === "bookList"? <BookList bookList ={data.books}/>
+              :curentTab === "userBookList" ? <UserBookList bookList = {userBookList} /> : null}
             </article>
         </main>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
-export const Stats = ( props ) => {
-    let {userStats} = props;
+export const Stats = ( userStats ) => {
+    
   return (
 
     <section className="favorite-author">
@@ -14,7 +14,7 @@ export const Stats = ( props ) => {
           </thead>
         </tr>
         <tbody>
-          {props.favoriteAuthor.map(author => (
+          {userStats.favoriteAuthor.map(author => (
             <tr>
               <td>{author.name}</td>
               <td>

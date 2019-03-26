@@ -1,75 +1,101 @@
 {
-    "users": {
-        "name" : "Amie Chen",
-        "joined": 2017,
-        "book" : [
-            {
-                "name": "The anatomy of Type",
-                "url": "url1"
-            },
-            {
-                "name": "The Ententical Principle",
-                "url": "url1"
-            },
-            {
-                "name": "How to",
-                "url": "url1"
-            },
-            {
-                "name": "The anatomy of Type",
-                "url": "url1"
-            }
-        ]
+  "users": {
+    "name": "Amie Chen",
+    "joined": 2017,
+    "userStats": {
+      "favoriteAuthors": [
+        {
+          "name": "Yohji Yamamoto",
+          "owned": 5,
+          "wishlist": 4,
+          "nationality": "Japan"
+        },
+        {
+          "name": "Sato Oki",
+          "owned": 1,
+          "wishlist": 3,
+          "nationality": "Japan"
+        },
+        {
+            "name": "Amaya Arzuaga",
+            "owned": 1,
+            "wishlist": 1,
+            "nationality": "Japan"
+          }
+      ],
+      "mostReadFormat": "Print",
+      "totalRead": 4,
+      "totalOwn" : 7,
+      "mostReRead" : "Just My Type: A Book About Fonts by Simon Garfield"
     },
-        "books": [
-            {
-                "name": "apartmento",
-                "url": "./img/book-01.jpg",
-                "date": "Aug 2018",
-                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
-            },
-            {
-                "name": "Popeye",
-                "url": "./img/book-02.jpg",
-                "date": "Aug 2018",
-                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
-            },
-            {
-                "name": "Brutus",
-                "url": "./img/book-03.jpg",
-                "date": "Aug 2018",
-                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
-            },
-            {
-                "name": "Harnako",
-                "url": "./img/book-04.jpg",
-                "date": "Aug 2018",
-                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
-            },
-            {
-                "name": "Premium 2",
-                "url": "./img/book-05.jpg",
-                "date": "Aug 2018",
-                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
-            },
-            {
-                "name": "Premium 4",
-                "url": "./img/book-06.jpg",
-                "date": "Aug 2018",
-                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
-            },
-            {
-                "name": "Brutus",
-                "url": "./img/book-07.jpg",
-                "date": "Aug 2018",
-                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
-            }
-            
-        ]
-
-    
+    "book": [
+      {
+        "name": "The anatomy of Type",
+        "img": "url1"
+      },
+      {
+        "name": "The Ententical Principle",
+        "img": "url1"
+      },
+      {
+        "name": "How to",
+        "img": "url1"
+      },
+      {
+        "name": "The anatomy of Type",
+        "img": "url1"
+      }
+    ]
+  },
+  "books": [
+    {
+      "title": "apartmento",
+      "img": "./img/book-01.jpg",
+      "date": "Aug 2018",
+      "description": "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent.",
+      "recommended": true
+    },
+    {
+      "title": "Popeye",
+      "img": "./img/book-02.jpg",
+      "date": "Aug 2018",
+      "description": "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent.",
+      "recommended": false
+    },
+    {
+      "title": "Brutus",
+      "img": "./img/book-03.jpg",
+      "date": "Aug 2018",
+      "description": "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent.",
+      "recommended": true
+    },
+    {
+      "title": "Harnako",
+      "img": "./img/book-04.jpg",
+      "date": "Aug 2018",
+      "description": "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent.",
+      "recommended": false
+    },
+    {
+      "title": "Premium 2",
+      "img": "./img/book-05.jpg",
+      "date": "Aug 2018",
+      "description": "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent.",
+      "recommended": false
+    },
+    {
+      "title": "Premium 4",
+      "img": "./img/book-06.jpg",
+      "date": "Aug 2018",
+      "description": "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent.",
+      "recommended": true
+    },
+    {
+      "title": "Brutus",
+      "img": "./img/book-07.jpg",
+      "date": "Aug 2018",
+      "description": "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent.",
+      "recommended": true
+    }
+  ]
 }
-    
-
-
-
