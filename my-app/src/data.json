@@ -1,0 +1,75 @@
+{
+    "users": {
+        "name" : "Amie Chen",
+        "joined": 2017,
+        "book" : [
+            {
+                "name": "The anatomy of Type",
+                "url": "url1"
+            },
+            {
+                "name": "The Ententical Principle",
+                "url": "url1"
+            },
+            {
+                "name": "How to",
+                "url": "url1"
+            },
+            {
+                "name": "The anatomy of Type",
+                "url": "url1"
+            }
+        ]
+    },
+        "books": [
+            {
+                "name": "apartmento",
+                "url": "./img/book-01.jpg",
+                "date": "Aug 2018",
+                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
+            },
+            {
+                "name": "Popeye",
+                "url": "./img/book-02.jpg",
+                "date": "Aug 2018",
+                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
+            },
+            {
+                "name": "Brutus",
+                "url": "./img/book-03.jpg",
+                "date": "Aug 2018",
+                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
+            },
+            {
+                "name": "Harnako",
+                "url": "./img/book-04.jpg",
+                "date": "Aug 2018",
+                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
+            },
+            {
+                "name": "Premium 2",
+                "url": "./img/book-05.jpg",
+                "date": "Aug 2018",
+                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
+            },
+            {
+                "name": "Premium 4",
+                "url": "./img/book-06.jpg",
+                "date": "Aug 2018",
+                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
+            },
+            {
+                "name": "Brutus",
+                "url": "./img/book-07.jpg",
+                "date": "Aug 2018",
+                "description" : "Eu quo donec pellentesque, urna velit. Ultrices ante iaculis ligula praesent."
+            }
+            
+        ]
+
+    
+}
+    
+
+
+
