@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {Nav} from "./components/Nav";
 
-import { FaSearch } from "react-icons/fa";
 import {BookList} from "./components/BookList";
 import {Stats} from "./components/Stats";
 import {UserBookList} from "./components/UserBookList";
@@ -32,15 +31,11 @@ class App extends Component {
     let userBookList = data.books.filter(book => book.recommended);
     return (
       <div className="App">
-        <header className="App-header">
-          <div className="search-area">
-            <FaSearch />
-            <input type="text" />
-          </div>
-        </header>
+        
+        <Nav menuList={this.state.menuItems} manageTitle = {this.manageTitle}/>
         <main>
         
-          <Nav menuList={this.state.menuItems} manageTitle = {this.manageTitle}/>
+         
       
           <header>
             <h1>{currentCategory} </h1>
