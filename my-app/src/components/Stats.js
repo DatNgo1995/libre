@@ -1,21 +1,23 @@
 import React from "react";
 
-export const Stats = ( userStats ) => {
-    
-  return (
+export const Stats = ( {userStats} ) => {
 
+  return (
+   
     <section className="favorite-author">
       <table>
+      <thead>
         <tr>
-          <thead>
+          
             <td>Name</td>
             <td>Owned/Wishlist</td>
             <td>Nationality</td>
-          </thead>
+          
         </tr>
+        </thead>
         <tbody>
-          {userStats.favoriteAuthor.map(author => (
-            <tr>
+          {userStats.favoriteAuthors.map((author,i) => (
+            <tr key={i}>
               <td>{author.name}</td>
               <td>
                 {author.owned}/{author.wishlist}

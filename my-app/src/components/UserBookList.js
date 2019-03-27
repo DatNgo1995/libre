@@ -1,6 +1,6 @@
 import React from "react";
 
-export const UserBookList = (bookList) => {
+export const UserBookList = ({bookList}) => {
     return (
         <section>
             {

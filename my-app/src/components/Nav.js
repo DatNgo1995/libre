@@ -1,6 +1,11 @@
 import React from 'react';
-import {FaBars} from './react-icons/fa';
-export const Nav = (menuList) => {
+import {FaBars} from 'react-icons/fa';
+export const Nav = ({menuList, manageTitle}) => {
+    const renderMenu = (options) => 
+   options.map ( option => !option.subMenus
+    ? <li onClick = {manageTitle.bind(this, option.name)}>{option.name}</li>: <li><ul>{renderMenu(option.subMenus)}</ul></li>)
+  
+
     return (
         <div>
             
@@ -14,7 +19,3 @@ export const Nav = (menuList) => {
     )
 }
 
-const renderMenu = (options) => {
-    options.map ( option => typeof option === 'string'
-    ? <li>{option}</li>: <li><ul>{renderMenu(option)}</ul></li>)
-}
