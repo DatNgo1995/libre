@@ -12,6 +12,7 @@ class App extends Component {
     data: data,
     curentTab: "stats",
     currentCategory: "Art & Design",
+    navDisplay: "none",
     menuItems : [
       {name: 'Home'},
       {name: 'Categories', subMenus: [{name: 'Fiction'}, {name: 'Nonfiction'}, {name: 'Art & Design'}]},
@@ -24,7 +25,12 @@ class App extends Component {
 
   manageTitle = title => this.setState({ currentCategory: title })
 
-  
+  toggleNav = () => {
+  console.log(this.state.navDisplay )
+    this.state.navDisplay === "none" ? this.setState({ navDisplay: "flex" }): this.setState({ navDisplay: "none" })
+    this.forceUpdate()
+} 
+
 
   render() {
     let { curentTab, currentCategory, data } = this.state;
@@ -32,14 +38,17 @@ class App extends Component {
     return (
       <div className="App">
         
-        <Nav menuList={this.state.menuItems} manageTitle = {this.manageTitle}/>
+        <Nav menuList={this.state.menuItems} manageTitle = {this.manageTitle} toggleNav= {this.toggleNav} navDisplay={this.state.navDisplay}/>
         <main>
         
          
       
           <header>
+            <div>
             <h1>{currentCategory} </h1>
             <h2>Interesting Stats</h2>
+            </div>
+            
             <button>Add New Book</button>
           </header>
           <article>

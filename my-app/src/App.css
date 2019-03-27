@@ -57,3 +57,11 @@ ul, li {
 ul {
     padding-left: 1rem;
 }
+
+main {
+    padding: 1rem;
+}
+main header {
+    display: flex;
+    justify-content: space-between
+}
