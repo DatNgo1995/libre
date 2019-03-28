@@ -17,19 +17,27 @@ class App extends Component {
       {name: 'Home'},
       {name: 'Categories', subMenus: [{name: 'Fiction'}, {name: 'Nonfiction'}, {name: 'Art & Design'}]},
       {name: 'Wishlist'}
-  ]
+  ],
+ 
+
   };
-  manageTab = tab => 
+ 
+  manageTab = (e,tab) => {
+    Array.from(document.querySelectorAll('.tab li')).forEach(element => {
+      element.style.borderBottom =' 0px solid  #6574cd'
+    });
+    e.target.style.borderBottom = ' 2px solid  #6574cd'
     this.setState({ curentTab: tab });
+  }
+   
   
 
   manageTitle = title => this.setState({ currentCategory: title })
 
-  toggleNav = () => {
-  console.log(this.state.navDisplay )
+  toggleNav = () => 
     this.state.navDisplay === "none" ? this.setState({ navDisplay: "flex" }): this.setState({ navDisplay: "none" })
-    this.forceUpdate()
-} 
+
+  
 
 
   render() {
@@ -53,10 +61,10 @@ class App extends Component {
           </header>
           <article>
             <nav>
-              <ul>
-                <li onClick={this.manageTab.bind(this,"stats")}>stats</li>
-                <li onClick={this.manageTab.bind(this,"bookList")}>library</li>
-                <li onClick={this.manageTab.bind(this,"userBookList")}>
+              <ul  className="tab">
+                <li onClick={e=> this.manageTab(e,"stats")}>stats</li>
+                <li onClick={e=> this.manageTab(e,"bookList")}>library</li>
+                <li onClick={e=> this.manageTab(e,"userBookList")}>
                   pick for you
                 </li>
               </ul>
@@ -66,7 +74,7 @@ class App extends Component {
             ) : curentTab === "bookList" ? (
               <BookList bookList={data.books} />
             ) : curentTab === "userBookList" ? (
-              <UserBookList bookList={userBookList} />
+              <UserBookList bookList={userBookList}  />
             ) : null}
           </article>
         </main>

@@ -15,8 +15,7 @@ export const Nav = ({ menuList, manageTitle, navDisplay, toggleNav }) => {
         </li>
       )
     );
-        console.log(navDisplay)
-    let navClassName ="navbar " + navDisplay
+
 
   return (
     <div>

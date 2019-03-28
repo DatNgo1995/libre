@@ -5,6 +5,7 @@ export const Stats = ( {userStats} ) => {
   return (
    
     <section className="favorite-author">
+    <article className = "author-table" >
       <table>
       <thead>
         <tr>
@@ -27,20 +28,24 @@ export const Stats = ( {userStats} ) => {
           ))}
         </tbody>
       </table>
+      </article>
 
             <article className="read-stats">
+                <div className="read-stats-upper">
                 <div className="most-read">
-                <h4>Most read format</h4>
-                <h4>{userStats.mostReadFormat}</h4>
+                <p className="purple-text">Most read format</p>
+                <p>{userStats.mostReadFormat}</p>
                 </div>
                 <div className="total-read-own">
-                <h4>Total read/own</h4>
-                <h4>{userStats.totalRead}/{userStats.totalOwn}</h4>
+                <p className="purple-text">Total read/own</p>
+                <p>{userStats.totalRead}/{userStats.totalOwn}</p>
+                </div>
+                </div>
                 <div className="most-re-read">
-                <h4>Most re-read book</h4>
-                <h4>{userStats.mostReRead}</h4>
+                <p className="purple-text">Most re-read book</p>
+                <p>{userStats.mostReRead}</p>
                 </div>
-                </div>
+                
             </article>
 
     </section>
