@@ -228,9 +228,7 @@ header button {
     flex-direction: column;
   }
 
- 
-  .book.common .description
-  {
+  .book.common .description {
     display: none;
   }
   .common h3 {
@@ -238,12 +236,23 @@ header button {
     display: block;
     float: left;
   }
-  .common img, .common .book-content {
+  .common img,
+  .common .book-content {
     width: 100%;
   }
   .common select {
     border-radius: 5rem;
-    font-size: .7rem;
+    font-size: 0.7rem;
     line-height: 1;
+  }
+  .bookList.individual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .App {
+    
   }
 }

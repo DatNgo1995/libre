@@ -4,7 +4,7 @@ export const UserBookList = ({bookList}) => {
 
     let  bgColor = ["#FBC164","#F1CECD","#ECE7E9","#D0E3E8"], count= 0;
     return (
-        <section className="bookList" style = {{marginTop: '-1rem'}}>
+        <section className="bookList individual" style = {{marginTop: '-1rem'}}>
             {
                 bookList.map (book => 
                         <section className ="book" style = {{backgroundColor : bgColor[count]}}>
