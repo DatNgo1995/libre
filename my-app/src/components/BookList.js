@@ -3,14 +3,14 @@ import {FaCaretDown} from "react-icons/fa"
 export const BookList = ({bookList}) => 
 
 
-        <section>
+        <section className="library">
             {
                 bookList.map (book => 
-                        <section  className ="book">
+                        <section  className ="book common">
                             <img src={book.img} alt="cover"/>
                             <article className =" book-content">
                             <h3>{book.title}/{book.date}</h3>
-                            <p>{book.description}</p>
+                            <p className="description">{book.description}</p>
                             <div className = "dropdown">
                             <select>
                                 <option>Finished</option>
