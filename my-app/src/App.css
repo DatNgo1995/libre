@@ -296,7 +296,7 @@ header button {
     grid-column: 2;
   }
   .navbar {
-    display: flex;
+    display: flex !important;
     color: #000;
     background-color: #f1f5f8;
     padding: 3rem;
