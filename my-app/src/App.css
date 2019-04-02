@@ -1,10 +1,19 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
 body {
   margin: 0;
   line-height: 1.15;
   font-size: 87.5%;
   background-color: #f1f5f8;
+  overflow-x: hidden;
 }
-
+.App {
+  grid-template-rows: 4rem auto;
+}
 .App-header {
   text-align: center;
   display: flex;
@@ -51,6 +60,18 @@ body {
   display: flex;
   background-color: #2f365f;
   color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding: 0px 0px 1.5rem 1rem;
+}
+.navbar li,
+.tab li,
+.fabars {
+  cursor: pointer;
+}
+.submenu-text {
+  color: #8795a1;
+  font-size: 1rem;
 }
 
 ul,
@@ -64,13 +85,11 @@ ul {
   margin: 0;
 }
 
-main {
-  padding: 1rem;
-}
 main header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 
 main header h1 {
@@ -83,7 +102,13 @@ main header h2 {
   font-size: 1rem;
   font-weight: 400;
 }
-
+button,
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
 header button {
   color: #fff;
   border-radius: 50px;
@@ -97,8 +122,6 @@ header button {
 .tab {
   display: flex;
   border-bottom: 2px solid #dae1e7;
-  width: 100vw;
-  left: -1rem;
   position: relative;
   margin-bottom: 1rem;
 }
@@ -213,9 +236,11 @@ header button {
 }
 
 .bookList {
-  width: 100vw;
-  left: -1rem;
   position: relative;
+}
+
+.user-info {
+  display: none;
 }
 
 @media (min-width: 600px) {
@@ -249,10 +274,60 @@ header button {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .fa-caret {
+    bottom: -3px;
+  }
 }
 
 @media (min-width: 1024px) {
   .App {
-    
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+  }
+  .App-header {
+    grid-column: 1/4;
+    display: inherit;
+    grid-template-columns: 25% 50% 25%;
+  }
+  .fabars {
+    display: none;
+  }
+  .search-area {
+    grid-column: 2;
+  }
+  .navbar {
+    display: flex;
+    color: #000;
+    background-color: #f1f5f8;
+    padding: 3rem;
+  }
+  main {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 1rem;
+  }
+  .user-info {
+    display: block;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    padding: 1rem;
+    background-color: #eaf1f7;
+  }
+  .book-aside {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+  .book-aside img {
+    width: 25%;
+    margin: 0.3rem;
+  }
+  .library {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1538px) {
+  .library {
+    grid-template-columns: repeat(5, 1fr);
   }
 }

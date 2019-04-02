@@ -1,35 +1,28 @@
 import React from "react";
-import { FaBars } from "react-icons/fa";
-
-import { FaSearch } from "react-icons/fa";
-export const Nav = ({ menuList, manageTitle, navDisplay, toggleNav }) => {
+export const Nav = ({ menuList, manageTitle, navDisplay }) => {
   
-  const renderMenu = options =>
+  const renderMenu = (options,isSubmenu = false) =>
     options.map(option =>
       !option.subMenus ? (
+        isSubmenu ?
+        <li className="submenu-text" onClick={manageTitle.bind(this, option.name)}>{option.name}</li>
+        :
         <li onClick={manageTitle.bind(this, option.name)}>{option.name}</li>
       ) : (
         <li>
           {option.name}
-          <ul>{renderMenu(option.subMenus)}</ul>
+          <ul>{renderMenu(option.subMenus,true)}</ul>
         </li>
       )
     );
 
 
   return (
-    <div>
-      <header className="App-header">
-        <FaBars className="fabars" onClick= {toggleNav} />
-        <div className="search-area">
-          <FaSearch className="fasearch" />
-          <input type="text" placeholder="Search" />
-        </div>
-      </header>
+    
 
       <nav className="navbar" style={{display:navDisplay}} >
         <ul>{renderMenu(menuList)}</ul>
       </nav>
-    </div>
+      
   );
 };

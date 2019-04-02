@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import { Nav } from "./components/Nav";
-
+import {Aside} from "./components/Aside"
 import { BookList } from "./components/BookList";
 import { Stats } from "./components/Stats";
 import { UserBookList } from "./components/UserBookList";
 import "./App.css";
 import data from "./data.json";
+import { Header } from "./components/Header";
 
 class App extends Component {
   constructor(){
     super()
     this.innerWidth = window.innerWidth;
+
   }
   state = {
     data: data,
@@ -28,7 +30,8 @@ class App extends Component {
         ]
       },
       { name: "Wishlist" }
-    ]
+    ],
+
   };
   
   manageTab = (e, tab) => {
@@ -51,10 +54,10 @@ class App extends Component {
     let userBookList = data.books.filter(book => book.recommended);
     return (
       <div className="App">
+        <Header toggleNav = {this.toggleNav}/>
         <Nav
           menuList={this.state.menuItems}
           manageTitle={this.manageTitle}
-          toggleNav={this.toggleNav}
           navDisplay={this.state.navDisplay}
         />
         <main>
@@ -84,7 +87,9 @@ class App extends Component {
               <UserBookList bookList={userBookList} />
             ) : null}
           </article>
+         
         </main>
+        <Aside userInfo = {data.users}/>
       </div>
     );
   }

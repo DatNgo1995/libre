@@ -1,27 +1,28 @@
 import React from 'react';
 
-export const Aside = (userInfo) => {
+export const Aside = ({userInfo}) => {
+    console.log( userInfo)
     return (
-        <aside>
-            <div>
-                <h2>{userInfo.name}</h2>
-                <h3>Joined since {userInfo.date}</h3>
-            </div>
-            <div>
-               <h1> You have read {userInfo.books.length} of 30 books in 2018. </h1>
-            </div>
-            <div>
-                <h3>Continue reading</h3>
+        <aside className="user-info">
+        
+                <h1>{userInfo.name}</h1>
+                <p>Joined since {userInfo.joined}</p>
+         
+ 
+               <h3> You have read {userInfo.books.length} of 30 books in 2018. </h3>
+      
+         
+               
+                <div className="book book-aside">
                 {
                     userInfo.books.map ( book => 
-                        <div>
-                            <img alt="cover"/>
-                            <h2>{book.title}</h2>
-                            <h3>{book.page} / {book.totalPage}</h3>
-                        </div>    
+              
+                            <img alt="cover" src ={book.img}/>
+   
                     )
                 }
-            </div>
+                </div>
+      
         </aside>
     )
 }

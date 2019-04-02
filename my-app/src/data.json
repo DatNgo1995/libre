@@ -17,33 +17,33 @@
           "nationality": "Japan"
         },
         {
-            "name": "Amaya Arzuaga",
-            "owned": 1,
-            "wishlist": 1,
-            "nationality": "Japan"
-          }
+          "name": "Amaya Arzuaga",
+          "owned": 1,
+          "wishlist": 1,
+          "nationality": "Japan"
+        }
       ],
       "mostReadFormat": "Print",
       "totalRead": 4,
-      "totalOwn" : 7,
-      "mostReRead" : "Just My Type: A Book About Fonts by Simon Garfield"
+      "totalOwn": 7,
+      "mostReRead": "Just My Type: A Book About Fonts by Simon Garfield"
     },
-    "book": [
+    "books": [
       {
         "name": "The anatomy of Type",
-        "img": "url1"
+        "img": "./img/read-01.jpg"
       },
       {
         "name": "The Ententical Principle",
-        "img": "url1"
+        "img": "./img/read-02.jpg"
       },
       {
         "name": "How to",
-        "img": "url1"
+        "img": "./img/read-03.jpg"
       },
       {
         "name": "The anatomy of Type",
-        "img": "url1"
+        "img": "./img/read-04.jpg"
       }
     ]
   },
