@@ -150,7 +150,7 @@ header button {
 .author-table table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 0.875rem;
+  font-size: .875rem;
 }
 .author-table thead {
   color: #6574cd;

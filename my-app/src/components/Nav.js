@@ -1,6 +1,5 @@
 import React from "react";
 export const Nav = ({ menuList, manageTitle, navDisplay }) => {
-  
   const renderMenu = (options,isSubmenu = false) =>
     options.map(option =>
       !option.subMenus ? (
@@ -16,10 +15,7 @@ export const Nav = ({ menuList, manageTitle, navDisplay }) => {
       )
     );
 
-
   return (
-    
-
       <nav className="navbar" style={{display:navDisplay}} >
         <ul>{renderMenu(menuList)}</ul>
       </nav>
